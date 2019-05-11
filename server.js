@@ -13,12 +13,15 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
-var currentReservations = [{
-    name: "Joe",
-    partyOf: 4,
-    time: 8,
-    date: "5/15/2019"
-}]
+var currentReservations = [
+    {
+        name: "Joe",
+        partyOf: 4,
+        phoneNumber: 5555555555,
+        email: "joe@example.com",
+    }
+]
+var waitlist = [];
 
 // Routes
 app.get("/", function (req, res) {
@@ -26,7 +29,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/add-reservation", function (req, res) {
-    res.sendFile(path.join(__dirname, "makeReservation.html"));
+    res.sendFile(path.join(__dirname, "add.html"));
 });
 
 app.get("/api/current-reservations", function (req, res) {
@@ -37,10 +40,15 @@ app.post("/api/current-reservations", function (req, res) {
     var newRes = req.body;
     newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
     console.log(newRes);
-    currentReservations.push(newRes);
+    if (currentReservations.length > 5) {
+        currentReservations.push(newRes);
+    }else{
+        waitlist.push(newRes);
+    }
     res.json(newRes);
 });
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
+
