@@ -36,11 +36,15 @@ app.get("/api/current-reservations", function (req, res) {
     res.json(currentReservations);
 });
 
+app.get("/api/current-waitlist", function (req, res){
+    res.json(waitlist);
+})
+
 app.post("/api/current-reservations", function (req, res) {
     var newRes = req.body;
     newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
     console.log(newRes);
-    if (currentReservations.length > 5) {
+    if (currentReservations.length < 5) {
         currentReservations.push(newRes);
     }else{
         waitlist.push(newRes);
