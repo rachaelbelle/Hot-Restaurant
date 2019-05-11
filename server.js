@@ -13,14 +13,12 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
-var currentReservations = [
-    {
-        name: "Joe",
-        partyOf: 4,
-        phoneNumber: 5555555555,
-        email: "joe@example.com",
-    }
-]
+var currentReservations = [{
+    name: "Joe",
+    partyOf: 4,
+    phoneNumber: 5555555555,
+    email: "joe@example.com",
+}]
 var waitlist = [];
 
 // Routes
@@ -42,7 +40,7 @@ app.post("/api/current-reservations", function (req, res) {
     console.log(newRes);
     if (currentReservations.length > 5) {
         currentReservations.push(newRes);
-    }else{
+    } else {
         waitlist.push(newRes);
     }
     res.json(newRes);
@@ -51,4 +49,3 @@ app.post("/api/current-reservations", function (req, res) {
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
-
