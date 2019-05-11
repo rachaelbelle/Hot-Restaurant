@@ -50,7 +50,6 @@
       $.get("/api/current-reservations", function (data) {
             console.log(data);
             if (data) {
-              $("#stats").show();
               $("#name").text(data.name);
               $("#partyOf").text(data.role);
               $("#phoneNumber").text(data.phoneNumber);
@@ -72,7 +71,6 @@
   
             } else {
               $("#name").text("The Information you searched for cannot be located");
-              $("#stats").hide();
             }
           }
 
@@ -80,7 +78,6 @@
     $.get("/api/current-waitlist", function (data) {
           console.log(data);
           if (data) {
-            $("#stats").show();
             $("#name").text(data.name);
             $("#partyOf").text(data.role);
             $("#phoneNumber").text(data.phoneNumber);
@@ -102,7 +99,6 @@
 
           } else {
             $("#name").text("The Information you searched for cannot be located");
-            $("#stats").hide();
           }
   </script>
 
