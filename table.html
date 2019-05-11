@@ -74,7 +74,7 @@
               $("#name").text("The Information you searched for cannot be located");
               $("#stats").hide();
             }
-          }
+          },
 
 
     $.get("/api/current-waitlist", function (data) {
@@ -104,9 +104,10 @@
             $("#name").text("The Information you searched for cannot be located");
             $("#stats").hide();
           }
+        });
+
   </script>
 
-  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
