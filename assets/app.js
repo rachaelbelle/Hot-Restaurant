@@ -6,9 +6,9 @@ $("#search-btn").on("click", function () {
         if (data) {
             $("#stats").show();
             $("#name").text(data.name);
-            $("#role").text(data.role);
-            $("#age").text(data.age);
-            $("#force-points").text(data.forcePoints);
+            $("#partyOf").text(data.partyOf);
+            $("#time").text(data.time);
+            $("#date").text(data.date);
         } else {
             $("#name").text("Sorry, the information you're looking for cannot be found.");
             $("#stats").hide();
