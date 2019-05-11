@@ -1,0 +1,25 @@
+body {
+  background-color: darkgray;
+
+}
+#tables{
+  box-align: center;
+}
+button{
+  margin-top: 10px;
+  text-shadow: 1px 1px #7e7373af;
+}
+#footer{
+  font-family: 'Special Elite', cursive;
+  background-image: linear-gradient(#257ee4, #333685);
+  padding: 25px;
+  border-top: 8px solid #ffffff;
+}
+#header{
+  padding: 5px;
+  border-bottom: 8px solid #ffffff;
+}
+.jumbotron {
+  margin: 50px;
+  padding: 20px;
+}

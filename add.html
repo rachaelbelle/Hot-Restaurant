@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reservation</title>
+  <meta name="description" content="Reservation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Righteous|Special+Elite|VT323"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="jumbotron">
+    <h1 class="display-4 text-center text-black"><i class="fab fa-hotjar"></i> Hot Restaurant</h1>
+    <hr class="my-4">
+    <h3 class="text-center text-black">Make your reservation</h3>
+    <div class="text-center">
+      <a class="btn btn-large btn-primary" id="tables" href="#">
+        <i class="far fa-credit-card"></i> View Tables</a>
+        <a class="btn btn-light"><i class="fas fa-home"></i></a>
+    </div>
+  </div>
+
+
+  <div class="jumbotron">
+    <div class="card-header">
+      Table Reservation
+    </div>
+    <div class="card-body">
+      <form role="form">
+        <div class="form-group">
+          <label for="reserve-name">Name</label>
+          <input type="text" class="form-control" id="reserve-name">
+        </div>
+        <div class="form-group">
+          <label for="reserve-phone">Phone Number</label>
+          <input type="text" class="form-control" id="reserve-phone">
+        </div>
+        <div class="form-group">
+          <label for="reserve-email">Email</label>
+          <input type="text" class="form-control" id="reserve-email">
+        </div>
+        <div class="form-group">
+            <label for="reserve-id">Unique ID</label>
+            <input type="text" class="form-control" id="reserve-id">
+          </div>
+
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
