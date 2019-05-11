@@ -15,8 +15,8 @@ var currentReservations = [
     {
         name: "Joe",
         partyOf: 4,
-        time: 8,
-        date: "5/15/2019"
+        phoneNumber: 5555555555,
+        email: "joe@example.com",
     }
 ]
 
@@ -26,7 +26,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/add-reservation", function (req, res) {
-    res.sendFile(path.join(__dirname, "makeReservation.html"));
+    res.sendFile(path.join(__dirname, "add.html"));
 });
 
 app.get("/api/current-reservations", function (req, res){
@@ -44,3 +44,4 @@ app.post("/api/current-reservations", function(req,res){
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+
