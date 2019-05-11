@@ -30,6 +30,10 @@ app.get("/add-reservation", function (req, res) {
     res.sendFile(path.join(__dirname, "add.html"));
 });
 
+app.get("/view-table", function (req, res) {
+    res.sendFile(path.join(__dirname, "table.html"));
+});
+
 app.get("/api/current-reservations", function (req, res) {
     res.json(currentReservations);
 });
