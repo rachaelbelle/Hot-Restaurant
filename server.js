@@ -38,7 +38,7 @@ app.get("/api/current-reservations", function (req, res) {
     res.json(currentReservations);
 });
 
-app.get("/api/current-waitlist", function (req, res){
+app.get("/api/current-waitlist", function (req, res) {
     res.json(waitlist);
 })
 
@@ -53,7 +53,6 @@ app.post("/api/current-reservations", function (req, res) {
     }
     res.json(newRes);
 });
-
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);

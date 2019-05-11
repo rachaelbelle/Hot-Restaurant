@@ -7,7 +7,6 @@ $("#addReservation").on("click", function () {
         phoneNumber: $("#phoneNumber").val().trim(),
         email: $("#email").val().trim()
     };
-    // Question: What does this code do??
     $.post("/api/current-reservations", newRes)
         .then(function (data) {
             console.log("add.html", data);
