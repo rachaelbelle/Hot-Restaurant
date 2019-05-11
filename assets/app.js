@@ -14,10 +14,3 @@ $("#addReservation").on("click", function () {
             alert("---Adding Reservation---");
         });
 });
-
-// var currentReservations = $("#table-search").val().trim();
-//     currentReservations = currentReservations.replace(/\s+/g, "").toLowerCase();
-// $.get("/api/view-reservations/" + currentReservations, function (data) {
-
-
-// };
