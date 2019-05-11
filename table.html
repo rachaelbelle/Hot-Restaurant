@@ -72,7 +72,7 @@
             } else {
               $("#name").text("The Information you searched for cannot be located");
             }
-          }
+          },
 
 
     $.get("/api/current-waitlist", function (data) {
@@ -100,6 +100,8 @@
           } else {
             $("#name").text("The Information you searched for cannot be located");
           }
+
+        }));
   </script>
 
   <!-- Bootstrap core JavaScript -->
