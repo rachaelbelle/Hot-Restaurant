@@ -15,7 +15,6 @@ $("#addReservation").on("click", function () {
         });
 });
 
-
 // var currentReservations = $("#table-search").val().trim();
 //     currentReservations = currentReservations.replace(/\s+/g, "").toLowerCase();
 // $.get("/api/view-reservations/" + currentReservations, function (data) {
